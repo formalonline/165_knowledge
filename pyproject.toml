@@ -1,0 +1,16 @@
+[project]
+name = "anti-scam-ai-knowledge-tw"
+version = "0.1.0"
+description = "Taiwan anti-scam AI knowledge pack generated from official open data."
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Your Name"}
+]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP", "B"]

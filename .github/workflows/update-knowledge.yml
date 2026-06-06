@@ -1,0 +1,41 @@
+name: Update Anti-Scam Knowledge
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Update knowledge files
+        env:
+          ANTI_SCAM_CSV_URL: ${{ secrets.ANTI_SCAM_CSV_URL }}
+        run: |
+          python scripts/update_all.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "anti-scam-bot"
+          git config user.email "actions@github.com"
+          git add data knowledge
+          git commit -m "chore: update anti-scam knowledge" || echo "No changes"
+          git push

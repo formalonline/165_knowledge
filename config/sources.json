@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "name": "165反詐騙諮詢專線_遭停止解析涉詐網站",
+      "type": "government_open_data",
+      "dataset_url": "https://data.gov.tw/dataset/176455",
+      "env_csv_url": "ANTI_SCAM_CSV_URL",
+      "description": "為處理詐欺犯罪防制緊急案件，及時防制民眾接觸詐欺網站的公開資料。"
+    },
+    {
+      "name": "內政部警政署165全民防騙網",
+      "type": "official_website",
+      "url": "https://165.npa.gov.tw/"
+    },
+    {
+      "name": "內政部警政署165打詐儀錶板",
+      "type": "official_dashboard",
+      "url": "https://165dashboard.tw/"
+    }
+  ]
+}
