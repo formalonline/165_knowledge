@@ -1,10 +1,10 @@
 # 涉詐網站資料摘要
 
-更新時間：2026-07-01 13:21:44 +0800
+更新時間：2026-07-02 12:57:46 +0800
 
 資料來源：政府資料開放平臺 165反詐騙諮詢專線_遭停止解析涉詐網站
 
-目前攔阻解析總網域筆數：57814 筆
+目前攔阻解析總網域筆數：61892 筆
 
 ## 使用提醒
 
@@ -38,6 +38,7 @@
 - `000.word1018.shop` (金融保險)
 - `00000twqh.com` (金融保險)
 - `0001.goodplay.asia` (抽獎博弈)
+- `0008tk.top` (金融保險)
 - `0019.com.tw` (醫療保健)
 - `001jjdkf.com` (金融保險)
 - `01.bullionve.shop` (金融保險)
@@ -64,10 +65,13 @@
 - `010.small1006.shop` (金融保險)
 - `010.trans1017.shop` (金融保險)
 - `010.word1018.shop` (金融保險)
+- `0126irg.shop` (金融保險)
 - `01chiick.shop` (電子商務)
 - `01fanglve.shop` (電子商務)
 - `01ouwe.com` (金融保險)
 - `01salt.shop` (電子商務)
+- `01ub539.utfobn.shop` (金融保險)
+- `01xx539.xwyzz.store` (金融保險)
 - `02.bullionve.shop` (金融保險)
 - `02.cheaps1224.shop` (金融保險)
 - `02.dashdeexj.com` (金融保險)
@@ -96,6 +100,8 @@
 - `03.small1006.shop` (金融保險)
 - `03.trans1017.shop` (金融保險)
 - `03.word1018.shop` (金融保險)
+- `03a34250be6f08e5705ab3fa929744a5.0126irg.shop` (金融保險)
+- `03bigx5js.3rxrsbr96.com` (金融保險)
 - `03exxert.shop` (電子商務)
 - `03kujf.com` (金融保險)
 - `03ub539.utfobn.shop` (金融保險)
@@ -106,9 +112,3 @@
 - `04tumg.atoms.world` (金融保險)
 - `058fu.com` (金融保險)
 - `05milk.shop` (電子商務)
-- `05sdjf.top` (電子商務)
-- `06flock.shop` (電子商務)
-- `06lewd.shop` (電子商務)
-- `07berserk.shop` (電子商務)
-- `088gloadsh.vip` (金融保險)
-- `08framexxl.shop` (電子商務)
