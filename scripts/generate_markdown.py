@@ -14,6 +14,16 @@ def now_text() -> str:
     return datetime.now(TZ_TAIPEI).strftime("%Y-%m-%d %H:%M:%S %z")
 
 
+def license_notice(dataset_name: str) -> str:
+    year = datetime.now(TZ_TAIPEI).year
+    return (
+        "## 📄 資料授權與引用\n\n"
+        f"提供機關／單位：內政部警政署 [{year}] {dataset_name}\n\n"
+        "本資料依政府資料開放授權條款（第1版）進行利用，"
+        "詳細條款請見 <https://data.gov.tw/license>。\n"
+    )
+
+
 def read_json_safe(path: Path) -> dict | list:
     if not path.exists():
         return {}
@@ -51,6 +61,7 @@ def generate_suspicious_domains(processed_csv: Path, out_dir: Path) -> None:
         site_type = row.get("site_type", "涉詐網站")
         if domain:
             lines.append(f"- `{domain}` ({site_type})")
+    lines.extend(["", license_notice("165反詐專線_遭停止解析涉詐網站")])
     (out_dir / "suspicious-domains.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -272,6 +283,8 @@ def generate_latest(processed_json: Path, raw_dir: Path, out_dir: Path) -> None:
         "1. **限制**：只協助識詐、防詐、查證、保存證據、諮詢與報案。不得提供任何可被用於詐騙的劇本、話術生成或洗錢指引。",
         "2. **不重複個資**：若使用者輸入完整金融卡號、帳密、身分證字號、簡訊驗證碼，請警告使用者遮蔽，並不得在 AI 的回覆中重複輸出該機密資訊。",
         "3. **免責聲明**：回答末尾須提醒「AI 判斷僅供參考，若遇緊急狀況或財損，請立刻撥打 165 諮詢或 110 報案」。",
+        "",
+        license_notice("165反詐專線_遭停止解析涉詐網站；165反詐騙諮詢專線－詐騙闢謠專區"),
     ])
 
     (out_dir / "anti-scam-latest.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
